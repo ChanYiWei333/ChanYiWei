@@ -522,6 +522,28 @@
 				.pfl-featured { grid-column: span 1; }
 				.contact-block { padding: 30px 20px; }
 				.section-head { flex-direction: column; align-items: flex-start; }
+
+				/* === 针对移动端超出边框的新增修复 === */
+				.tech-grid {
+					grid-template-columns: 1fr; /* 手机端单列排布，防止被 220px 撑破 */
+				}
+
+				.certs-grid {
+					grid-template-columns: 1fr; /* 证书在手机端单列排布，消除 320px 最小宽度的溢出 */
+				}
+
+				.language-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.contact-link-item {
+					word-break: break-all; /* 防止超长邮箱和链接撑破联系方式卡片 */
+				}
+
+				.highlight-card {
+					padding: 20px;
+					flex-direction: column; /* 缩小屏宽时图标与文字上下排布，避免水平拥挤 */
+				}
 			}
 
 			.hero-card {
@@ -818,15 +840,14 @@
 									<div class="cert-card">
 										<div>
 											<div class="cert-header">
-												<div class="cert-icon" style="background: #EFF6FF; color: #2563EB;"><i class="fa-solid fa-certificate"></i></div>
+												<div class="cert-icon" style="background: #FEF3C7; color: #D97706;"><i class="fa-solid fa-graduation-cap"></i></div>
 												<div>
-													<div class="cert-title">SAS Certified Specialist: Visual Business Analytics Using SAS Viya</div>
-													<div class="cert-meta">SAS Institute &bull; July 2026</div>
+													<div class="cert-title">Foundations of Data Science – Google Career Certificate</div>
+													<div class="cert-meta">Google / Coursera &bull; August 2026</div>
 												</div>
 											</div>
-										
 										</div>
-										<a href="https://www.credly.com/badges/c404d6ee-4c95-4c19-9d7c-a2297ec149e4/public_url" target="_blank" rel="noopener noreferrer" class="btn btn-blue" style="width: fit-content; font-size: 0.85rem;">
+										<a href="https://www.coursera.org/account/accomplishments/verify/6M70JYVVCJDI" target="_blank" rel="noopener noreferrer" class="btn btn-blue" style="width: fit-content; font-size: 0.85rem;">
 											Verify Credential <i class="fa-solid fa-arrow-up-right-from-square"></i>
 										</a>
 									</div>
